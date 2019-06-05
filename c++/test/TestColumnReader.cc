@@ -2695,7 +2695,7 @@ TEST(TestColumnReader, testTimestampSkipWithNulls) {
   StructVectorBatch batch(1024, *getDefaultPool());
   batch.fields.push_back(longBatch);
 
-  const char *(expected[]) = {"Fri May 10 10:40:50 2013\n",
+  const char *expected[] = {"Fri May 10 10:40:50 2013\n",
                               "Wed Jun 11 11:41:51 2014\n",
                               "Sun Jul 12 12:42:52 2015\n",
                               "Sat Aug 13 13:43:53 2016\n"};
@@ -2812,7 +2812,7 @@ TEST(TestColumnReader, testTimestamp) {
   StructVectorBatch batch(1024, *getDefaultPool());
   batch.fields.push_back(longBatch);
 
-  const char *(expected[]) = {"Sun Mar 12 15:00:00 2000\n",
+  const char *expected[] = {"Sun Mar 12 15:00:00 2000\n",
                               "Mon Mar 20 12:00:00 2000\n",
                               "Mon Jan  1 00:00:00 1900\n",
                               "Sat May  5 12:34:56 1900\n",
